@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", sans-serif;
+  
+  --color-brand-blue: #ffffff;
+  --color-brand-blue-glow: rgba(255, 255, 255, 0.3);
+  --color-navy-950: #000000;
+  --color-navy-900: #0a0a0a;
+
+  --color-bg: #000000;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a1a1aa;
+  --color-border: rgba(255, 255, 255, 0.15);
+  --color-glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+.light {
+  --color-brand-blue: #000000;
+  --color-brand-blue-glow: rgba(0, 0, 0, 0.1);
+  --color-bg: #ffffff;
+  --color-text-primary: #000000;
+  --color-text-secondary: #52525b;
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-glass-bg: rgba(0, 0, 0, 0.02);
+}
+
+@layer base {
+  body {
+    @apply antialiased transition-colors duration-500 selection:bg-brand-blue/10 font-sans font-light;
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-medium tracking-tight;
+    letter-spacing: -0.04em;
+  }
+}
+
+.glass {
+  @apply backdrop-blur-xl transition-all duration-300 rounded-[2px];
+  background-color: var(--color-glass-bg);
+  border: 1px solid var(--color-border);
+}
+
+.glass-card {
+  @apply backdrop-blur-md transition-all duration-300 shadow-xl rounded-[2px];
+  background-color: var(--color-glass-bg);
+  border: 1px solid var(--color-border);
+}
+
+.dark .glass-card {
+  @apply shadow-[0_8px_32px_0_rgba(0,0,0,0.8)];
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.light .text-glow {
+  text-shadow: none;
+}
