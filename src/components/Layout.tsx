@@ -2,8 +2,7 @@ import { motion } from "motion/react";
 import { Zap } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from 'react';
-import { getSupabase } from '../lib/supabase';
+
 
 interface NavbarProps {
   theme: 'dark' | 'light';
@@ -11,18 +10,7 @@ interface NavbarProps {
 }
 
 export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
-  const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    const { data: { subscription } } = getSupabase().auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null);
-    });
-    
-    // Initial user check
-    getSupabase().auth.getUser().then(({ data: { user } }) => setUser(user));
-
-    return () => subscription.unsubscribe();
-  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6">
@@ -44,15 +32,9 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
 
         <div className="flex items-center gap-4">
           <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-          {user ? (
-            <Link to="/dashboard" className="hidden sm:block bg-brand-blue text-[var(--color-bg)] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all active:scale-95 shadow-sm hover:shadow-[0_0_20px_2px_rgba(255,255,255,0.2)]">
-              Dashboard
-            </Link>
-          ) : (
-            <Link to="/login" className="hidden sm:block bg-brand-blue text-[var(--color-bg)] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all active:scale-95 shadow-sm hover:shadow-[0_0_20px_2px_rgba(255,255,255,0.2)]">
-              Sign In
-            </Link>
-          )}
+          <a href="https://deafconnect-ai.streamlit.app" target="_blank" rel="noopener noreferrer" className="hidden sm:block bg-brand-blue text-[var(--color-bg)] px-5 py-2.5 rounded-full font-bold text-xs uppercase tracking-widest hover:opacity-90 transition-all active:scale-95 shadow-sm hover:shadow-[0_0_20px_2px_rgba(255,255,255,0.2)]">
+            Launch Platform
+          </a>
         </div>
       </div>
     </nav>

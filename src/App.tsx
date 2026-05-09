@@ -12,7 +12,6 @@ import { PrivacyPage } from "./pages/PrivacyPage";
 import { TermsPage } from "./pages/TermsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { LearningResourcesPage } from "./pages/LearningResourcesPage";
-import { LoginPage } from "./pages/LoginPage";
 
 function HomePage() {
   return (
@@ -83,7 +82,6 @@ export default function App() {
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/learning-resources" element={<LearningResourcesPage />} />
-            <Route path="/login" element={<LoginPage />} />
           </Routes>
         </main>
 
