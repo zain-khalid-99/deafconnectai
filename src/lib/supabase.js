@@ -8,7 +8,14 @@ export const getSupabase = () => {
     const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
     if (!supabaseUrl || !supabaseAnonKey) {
-      throw new Error('SUPABASE_URL and SUPABASE_ANON_KEY environment variables are required');
+      console.warn('SUPABASE_URL and SUPABASE_ANON_KEY environment variables are required. Mocking Supabase client to prevent app crash.');
+      // Return a mock client to prevent the app from crashing when env variables are missing
+      return {
+        auth: {
+          onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => {} } } }),
+          getUser: async () => ({ data: { user: null } })
+        }
+      };
     }
 
     supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
