@@ -13,7 +13,6 @@ import { TermsPage } from "./pages/TermsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { LearningResourcesPage } from "./pages/LearningResourcesPage";
 import { LoginPage } from "./pages/LoginPage";
-import { SignupPage } from "./pages/SignupPage";
 
 function HomePage() {
   return (
@@ -85,7 +84,6 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/learning-resources" element={<LearningResourcesPage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/signup" element={<SignupPage />} />
           </Routes>
         </main>
 
