@@ -13,7 +13,11 @@ export const getSupabase = () => {
       return {
         auth: {
           onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => {} } } }),
-          getUser: async () => ({ data: { user: null } })
+          getUser: async () => ({ data: { user: null } }),
+          signInWithPassword: async () => ({ error: { message: "Supabase not configured. Add env variables." } }),
+          signUp: async () => ({ error: { message: "Supabase not configured. Add env variables." } }),
+          signInWithOAuth: async () => { alert("Supabase not configured. Add env variables to enable Google Login."); return { data: null, error: null }; },
+          signOut: async () => ({ error: null })
         }
       };
     }
