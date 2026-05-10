@@ -215,6 +215,13 @@ const ParticleCard = ({
         });
       }
 
+      // Always update glow properties for CSS border glow
+      const relativeX = (x / rect.width) * 100;
+      const relativeY = (y / rect.height) * 100;
+      element.style.setProperty('--glow-x', `${relativeX}%`);
+      element.style.setProperty('--glow-y', `${relativeY}%`);
+      element.style.setProperty('--glow-intensity', '1');
+
       if (enableMagnetism) {
         const magnetX = (x - centerX) * 0.05;
         const magnetY = (y - centerY) * 0.05;
@@ -567,6 +574,13 @@ const MagicBento = ({
                       transformPerspective: 1000
                     });
                   }
+
+                  // Always update glow properties for CSS border glow
+                  const relativeX = (x / rect.width) * 100;
+                  const relativeY = (y / rect.height) * 100;
+                  el.style.setProperty('--glow-x', `${relativeX}%`);
+                  el.style.setProperty('--glow-y', `${relativeY}%`);
+                  el.style.setProperty('--glow-intensity', '1');
 
                   if (enableMagnetism) {
                     const magnetX = (x - centerX) * 0.05;

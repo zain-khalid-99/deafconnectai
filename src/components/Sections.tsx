@@ -129,12 +129,12 @@ export const Features = () => {
         <MagicBento 
           data={bentoData}
           textAutoHide={true}
-          enableStars={true}
-          enableSpotlight={true}
+          enableStars={false}
+          enableSpotlight={false}
           enableBorderGlow={true}
           enableTilt={true}
-          enableMagnetism={true}
-          clickEffect={true}
+          enableMagnetism={false}
+          clickEffect={false}
           spotlightRadius={400}
           glowColor="0, 102, 255"
         />
