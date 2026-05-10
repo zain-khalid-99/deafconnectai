@@ -58,16 +58,16 @@ export const AIVisualization = () => {
       >
         <div className="flex items-center gap-2 mb-2 lg:mb-3 text-brand-blue">
           <Layers size={14} />
-          <span className="text-[9px] font-bold uppercase tracking-widest opacity-70">Live Neural Processing</span>
+          <span className="text-[9px] font-bold uppercase tracking-widest opacity-70">Neural Inference Running</span>
         </div>
         <p className="text-xs lg:text-sm font-light text-[var(--color-text-secondary)] italic leading-relaxed tracking-tight">
-          "Pioneering accessibility through deep spatial recognition models."
+          "Two-Way Communication Live"
         </p>
       </motion.div>
 
       {/* Small Recognition Indicators */}
       <div className="absolute top-1/2 -left-12 lg:-left-20 flex flex-col gap-2">
-        {['Gesture Detected', 'AI Recognition Active', 'Speech Converted'].map((label, i) => (
+        {['Real-Time AI Detection', '126 Features Extracted', 'MediaPipe Tracking', 'Accessibility Enabled'].map((label, i) => (
           <motion.div
             key={label}
             initial={{ opacity: 0, x: -10 }}
@@ -179,7 +179,7 @@ export const Hero = () => {
             viewport={{ once: true }}
             className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-medium text-[var(--color-text-primary)] leading-[0.95] lg:leading-[0.9] tracking-[-0.04em] mb-10"
           >
-            Breaking communication barriers with <span className="text-brand-blue text-glow">real-time AI</span>
+            Breaking communication barriers with <span className="text-brand-blue text-glow">intelligent sign language AI</span>
           </motion.h1>
 
           <motion.p 
@@ -189,7 +189,7 @@ export const Hero = () => {
             viewport={{ once: true }}
             className="text-base md:text-lg lg:text-xl text-[var(--color-text-secondary)] max-w-xl mb-12 leading-relaxed font-light mx-auto lg:mx-0"
           >
-            DeafConnect AI transforms sign language into seamless communication using deep learning, real-time gesture recognition, speech intelligence, and accessibility-first AI systems.
+            DeafConnect AI is a real-time bidirectional communication platform designed to bridge the gap between deaf and hearing individuals using computer vision, deep learning, speech intelligence, and accessibility-first AI technology.
           </motion.p>
 
           <motion.div 
@@ -200,10 +200,10 @@ export const Hero = () => {
             className="flex flex-col sm:flex-row items-center gap-5 justify-center lg:justify-start"
           >
             <Button variant="primary" className="w-full sm:w-auto min-w-[180px] lg:min-w-[200px]">
-              Try Live Demo
+              Launch Live Demo
             </Button>
             <Button variant="glass" className="w-full sm:w-auto min-w-[180px] lg:min-w-[200px]">
-              See How It Works
+              Explore AI Technology
             </Button>
           </motion.div>
         </motion.div>
@@ -216,7 +216,7 @@ export const Hero = () => {
       {/* Curved Loop integration */}
       <div className="absolute bottom-0 left-0 w-full opacity-50 dark:opacity-30 pointer-events-none lg:pointer-events-auto">
         <CurvedLoop 
-          marqueeText="BREAKING ✦ BARRIERS ✦ BUILDING ✦ CONNECTIONS ✦ DEAFCONNECT AI ✦ "
+          marqueeText="DEAFCONNECT AI ✦ REAL-TIME SIGN LANGUAGE AI ✦ BI-DIRECTIONAL COMMUNICATION ✦ "
           speed={0.8}
           curveAmount={300}
           direction="left"

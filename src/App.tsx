@@ -22,7 +22,7 @@ function HomePage() {
       
       <div className="py-20 opacity-80 overflow-hidden">
         <CurvedLoop 
-          marqueeText="Breaking ✦ Barriers ✦ Building✦ connections✦ deaf connect✦"
+          marqueeText="DEAFCONNECT AI ✦ REAL-TIME SIGN LANGUAGE INTELLIGENCE ✦ ACCESSIBILITY FOR ALL ✦ "
           speed={0.5}
           curveAmount={100}
           direction="left"
@@ -44,11 +44,11 @@ function HomePage() {
             Communication should <br/> <span className="text-brand-blue text-glow">never be a barrier.</span>
           </h2>
           <p className="text-xl text-[var(--color-text-secondary)] mb-12 font-light max-w-2xl mx-auto tracking-tight leading-relaxed">
-            DeafConnect AI combines artificial intelligence and accessibility to create a future where communication is seamless, inclusive, and human-centered.
+            DeafConnect AI combines artificial intelligence, computer vision, and accessibility-first engineering to create a future where communication becomes seamless, inclusive, and universally accessible for everyone.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button variant="primary" className="w-full sm:w-auto min-w-[200px]">Launch Platform</Button>
-            <Button variant="glass" className="w-full sm:w-auto min-w-[200px]">Request Demo</Button>
+            <Button variant="glass" className="w-full sm:w-auto min-w-[200px]">Request Early Access</Button>
           </div>
         </div>
       </section>
@@ -96,7 +96,7 @@ export default function App() {
                   <span className="font-display font-extrabold text-2xl tracking-[-0.05em] text-[var(--color-text-primary)]">DeafConnect<span className="text-brand-blue">AI</span></span>
                 </div>
                 <p className="text-[var(--color-text-secondary)] max-w-sm font-light leading-relaxed tracking-tight text-lg mx-auto md:mx-0">
-                  AI-powered accessibility platform transforming communication through real-time sign language intelligence.
+                  AI-powered accessibility platform transforming communication through real-time sign language intelligence and bidirectional AI interaction systems.
                 </p>
               </div>
               
@@ -105,25 +105,23 @@ export default function App() {
                 <ul className="space-y-4 text-sm text-[var(--color-text-secondary)] font-light">
                   <li><Link to="/#features" className="hover:text-brand-blue transition-colors">Features</Link></li>
                   <li><Link to="/#tech" className="hover:text-brand-blue transition-colors">Technology</Link></li>
-                  <li><Link to="/learning-resources" className="hover:text-brand-blue transition-colors">Learning Resources</Link></li>
-                  <li><Link to="/#workflow" className="hover:text-brand-blue transition-colors">How It Works</Link></li>
-                  <li><Link to="/#use-cases" className="hover:text-brand-blue transition-colors">Use Cases</Link></li>
+                  <li><Link to="/#roadmap" className="hover:text-brand-blue transition-colors">Roadmap</Link></li>
+                  <li><Link to="/privacy" className="hover:text-brand-blue transition-colors">Privacy Policy</Link></li>
+                  <li><Link to="/terms" className="hover:text-brand-blue transition-colors">Terms & Conditions</Link></li>
+                  <li><Link to="/contact" className="hover:text-brand-blue transition-colors">Contact</Link></li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="font-bold uppercase tracking-widest text-[var(--color-text-primary)] text-xs mb-8">Company</h4>
-                <ul className="space-y-4 text-sm text-[var(--color-text-secondary)] font-light">
-                  <li><Link to="/privacy" className="hover:text-brand-blue transition-colors">Privacy</Link></li>
-                  <li><Link to="/terms" className="hover:text-brand-blue transition-colors">Terms</Link></li>
-                  <li><Link to="/contact" className="hover:text-brand-blue transition-colors">Contact</Link></li>
-                  <li><Link to="/#roadmap" className="hover:text-brand-blue transition-colors">Roadmap</Link></li>
-                </ul>
+                <h4 className="font-bold uppercase tracking-widest text-[var(--color-text-primary)] text-xs mb-8">Copyright</h4>
+                <div className="text-[var(--color-text-secondary)] font-light text-sm">
+                  © 2026 DeafConnect AI. Built for inclusive communication.
+                </div>
               </div>
             </div>
             
             <div className="pt-12 border-t border-[var(--color-border)] flex flex-col md:flex-row items-center justify-between gap-6 text-[10px] uppercase tracking-[0.2em] font-bold text-[var(--color-text-secondary)] opacity-50">
-              <div>© 2025 DeafConnect AI. Built for inclusive communication.</div>
+              <div>© 2026 DeafConnect AI. All Rights Reserved.</div>
               <div className="flex items-center gap-8">
                 <a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">Twitter</a>
                 <a href="#" className="hover:text-[var(--color-text-primary)] transition-colors">LinkedIn</a>

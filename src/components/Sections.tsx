@@ -5,10 +5,10 @@ import MagicBento, { CardItem } from "./ui/MagicBento";
 
 export const Stats = () => {
   const stats = [
-    { label: "Hand Landmarks Tracked", value: "21", sub: "Global Standard" },
-    { label: "Features Processed Per Frame", value: "63", sub: "High-Frequency" },
+    { label: "Hand Landmarks Per Hand", value: "21+", sub: "3D Spatial Mapping" },
+    { label: "Features Extracted Per Frame", value: "126", sub: "Deep Signal Data" },
     { label: "Model Training Accuracy", value: "~95%", sub: "Validated Results" },
-    { label: "AI Processing Speed", value: "Real-Time", sub: "Zero Latency" }
+    { label: "Inference Latency", value: "<15ms", sub: "Real-Time Processing" }
   ];
 
   return (
@@ -45,37 +45,37 @@ export const Features = () => {
   const bentoData: CardItem[] = [
     {
       title: "Real-Time Sign Detection",
-      description: "Advanced MediaPipe hand tracking detects and processes live hand gestures with high precision using AI-powered landmark recognition.",
+      description: "Detects live ASL gestures through webcam input using MediaPipe 3D hand landmark extraction and deep learning inference pipelines.",
       label: "Intelligence",
       color: "rgba(0, 0, 0, 0.4)"
     },
     {
-      title: "Voice-to-Text Translation",
-      description: "Convert spoken language into real-time readable text instantly, helping deaf individuals communicate effortlessly in everyday conversations.",
-      label: "Audio AI",
+      title: "Bidirectional Communication",
+      description: "Supports both Sign-to-Voice and Voice-to-Text communication for seamless interaction between deaf and hearing users.",
+      label: "Two-Way AI",
       color: "rgba(0, 0, 0, 0.4)"
     },
     {
       title: "Text-to-Speech Output",
-      description: "Transform detected sign language into natural voice responses using intelligent offline speech synthesis systems.",
+      description: "Detected sign sequences are transformed into natural spoken audio using intelligent offline speech synthesis systems.",
       label: "Synthesis",
       color: "rgba(0, 0, 0, 0.4)"
     },
     {
-      title: "AI Gesture Recognition",
-      description: "Deep-learning-powered LSTM sequence modeling captures movement patterns across frames for accurate gesture understanding.",
+      title: "126-Feature AI Processing",
+      description: "Processes 126-dimensional landmark vectors from two-hand tracking for improved sign discrimination and recognition accuracy.",
       label: "Neural",
       color: "rgba(0, 0, 0, 0.4)"
     },
     {
-      title: "Offline AI Processing",
-      description: "Built to operate without constant internet dependency, ensuring reliable accessibility anywhere, anytime.",
-      label: "Edge",
+      title: "Real-Time Voice Recognition",
+      description: "Captures spoken audio through microphone input and converts speech into readable text for deaf users instantly.",
+      label: "Speech AI",
       color: "rgba(0, 0, 0, 0.4)"
     },
     {
-      title: "Scalable Architecture",
-      description: "Designed for future expansion with support for larger vocabularies, sentence prediction, multilingual systems, and mobile deployment.",
+      title: "Scalable Accessibility Architecture",
+      description: "Designed for future expansion including mobile AI deployment, multilingual sign support, and enterprise accessibility integrations.",
       label: "Growth",
       color: "rgba(0, 0, 0, 0.0)"
     }
@@ -99,7 +99,7 @@ export const Features = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl lg:text-8xl font-display font-medium text-[var(--color-text-primary)] mb-8 leading-none tracking-[-0.06em]"
           >
-            Built for intelligent, <br/><span className="text-brand-blue opacity-30">human communication.</span>
+            Real-time accessibility <br/><span className="text-brand-blue opacity-30">powered by AI.</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -108,7 +108,7 @@ export const Features = () => {
             transition={{ delay: 0.2 }}
             className="text-[var(--color-text-secondary)] max-w-2xl mx-auto text-lg md:text-xl font-light leading-relaxed tracking-tight"
           >
-            DeafConnect AI combines computer vision, speech intelligence, and deep learning into a seamless communication platform designed for inclusivity at scale.
+            DeafConnect AI combines MediaPipe landmark detection, TensorFlow neural networks, speech recognition, and intelligent sentence processing to enable seamless communication between deaf and hearing individuals.
           </motion.p>
         </div>
 

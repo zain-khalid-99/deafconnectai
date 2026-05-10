@@ -32,7 +32,7 @@ export const TechLogosLoop = () => {
     <div className="py-12 border-y border-[var(--color-border)] bg-brand-blue/[0.01]">
       <div className="max-w-7xl mx-auto px-8 mb-6">
         <p className="text-[10px] uppercase font-bold tracking-[0.3em] text-[var(--color-text-secondary)] opacity-50 text-center lg:text-left">
-          Our Intelligence Stack
+          AI Infrastructure Stack
         </p>
       </div>
       <LogoLoop
@@ -52,14 +52,14 @@ export const TechLogosLoop = () => {
 
 export const TechnologyStack = () => {
   const stack = [
-    { name: "MediaPipe", desc: "Real-time 3D hand landmark detection optimized for low-latency gesture tracking.", icon: <SiMediafire className="w-8 h-8" /> },
-    { name: "TensorFlow", desc: "Deep learning framework powering intelligent gesture classification and sequence modeling.", icon: <SiTensorflow className="w-8 h-8" /> },
-    { name: "LSTM Networks", desc: "Sequential neural architecture designed for understanding movement across time.", icon: <Cpu className="w-8 h-8" /> },
-    { name: "OpenCV", desc: "Computer vision pipeline enabling live webcam capture and frame preprocessing.", icon: <SiOpencv className="w-8 h-8" /> },
-    { name: "SpeechRecognition", desc: "Real-time speech transcription system for accessible communication.", icon: <Mic className="w-8 h-8" /> },
-    { name: "pyttsx3", desc: "Offline text-to-speech engine for natural voice output without internet dependency.", icon: <FileText className="w-8 h-8" /> },
-    { name: "Streamlit", desc: "Interactive interface architecture designed for rapid accessibility-focused deployment.", icon: <SiStreamlit className="w-8 h-8" /> },
-    { name: "NumPy", desc: "Efficient numerical processing for AI feature extraction and model inference.", icon: <SiNumpy className="w-8 h-8" /> }
+    { name: "MediaPipe", desc: "Real-time two-hand landmark detection optimized for CPU-based gesture tracking.", icon: <SiMediafire className="w-8 h-8" /> },
+    { name: "TensorFlow / Keras", desc: "Deep learning framework powering gesture classification and inference.", icon: <SiTensorflow className="w-8 h-8" /> },
+    { name: "OpenCV", desc: "Real-time webcam processing and computer vision pipeline management.", icon: <SiOpencv className="w-8 h-8" /> },
+    { name: "SpeechRecognition", desc: "Speech-to-text engine enabling hearing-to-deaf communication workflows.", icon: <Mic className="w-8 h-8" /> },
+    { name: "pyttsx3", desc: "Offline text-to-speech system for real-time voice generation.", icon: <FileText className="w-8 h-8" /> },
+    { name: "Streamlit", desc: "Interactive real-time application interface and accessibility dashboard.", icon: <SiStreamlit className="w-8 h-8" /> },
+    { name: "NumPy & Pandas", desc: "Feature engineering, preprocessing, and dataset management.", icon: <SiNumpy className="w-8 h-8" /> },
+    { name: "WLASL Dataset", desc: "Large-scale American Sign Language dataset used for AI model training.", icon: <Globe className="w-8 h-8" /> }
   ];
 
   return (
@@ -98,26 +98,25 @@ export const HowItWorks = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           <div>
-            <div className="text-[10px] uppercase font-bold tracking-[0.4em] text-brand-blue mb-4">System Workflow</div>
+            <div className="text-[10px] uppercase font-bold tracking-[0.4em] text-brand-blue mb-4">Bidirectional AI Communication</div>
             <h2 className="text-4xl md:text-6xl font-display font-medium text-[var(--color-text-primary)] tracking-[-0.04em] mb-8">
-              Two-way communication powered by <span className="opacity-30">intelligent AI.</span>
+              Two-way real-time communication powered by <span className="opacity-30">intelligent AI systems.</span>
             </h2>
             <p className="text-[var(--color-text-secondary)] text-lg font-light leading-relaxed mb-12">
-              DeafConnect AI enables seamless interaction between deaf individuals and hearing users through real-time bidirectional communication workflows.
+              DeafConnect AI enables natural communication between deaf and hearing individuals through real-time gesture recognition, speech processing, and accessibility-focused AI workflows.
             </p>
           </div>
           
           <div className="space-y-8">
             <div className="glass-card p-10 rounded-[2px] border border-[var(--color-border)]">
-              <h3 className="text-2xl font-bold mb-6 font-display tracking-tight">Sign Language → Voice</h3>
+              <h3 className="text-2xl font-bold mb-6 font-display tracking-tight">Sign Language → Speech</h3>
               <ul className="space-y-4">
                 {[
-                  "Camera captures real-time hand movement",
-                  "MediaPipe extracts 21 landmark points",
-                  "AI converts landmarks into feature vectors",
-                  "LSTM analyzes gesture sequences",
-                  "System predicts sign meaning",
-                  "Output converted into natural speech"
+                  "Webcam captures real-time hand gestures",
+                  "MediaPipe detects 21 landmarks per hand",
+                  "TensorFlow neural network predicts sign labels",
+                  "AI builds contextual sentence outputs",
+                  "Text converted into natural speech instantly"
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 text-sm text-[var(--color-text-secondary)] font-light">
                     <span className="text-brand-blue font-bold">{i + 1}.</span>
@@ -128,14 +127,14 @@ export const HowItWorks = () => {
             </div>
             
             <div className="glass-card p-10 rounded-[2px] border border-[var(--color-border)]">
-              <h3 className="text-2xl font-bold mb-6 font-display tracking-tight">Voice → Text</h3>
+              <h3 className="text-2xl font-bold mb-6 font-display tracking-tight">Speech → Text</h3>
               <ul className="space-y-4">
                 {[
-                  "Microphone captures spoken audio",
-                  "Speech recognition processes voice input",
-                  "AI converts speech into readable text",
-                  "Text displayed instantly on-screen",
-                  "Communication becomes accessible in real time"
+                  "Microphone captures spoken language",
+                  "SpeechRecognition processes audio input",
+                  "Spoken sentences converted into readable text",
+                  "Live captions displayed in real time",
+                  "Creates seamless hearing-to-deaf communication"
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4 text-sm text-[var(--color-text-secondary)] font-light">
                     <span className="text-brand-blue font-bold">{i + 1}.</span>
@@ -160,16 +159,19 @@ export const AIModel = () => {
   return (
     <section className="py-32 px-8 bg-brand-blue/[0.02]">
       <div className="max-w-7xl mx-auto text-center">
-        <div className="text-[10px] uppercase font-bold tracking-[0.4em] text-brand-blue mb-4">Deep Learning Architecture</div>
+        <div className="text-[10px] uppercase font-bold tracking-[0.4em] text-brand-blue mb-4">Deep Learning System</div>
         <h2 className="text-4xl md:text-6xl font-display font-medium text-[var(--color-text-primary)] tracking-[-0.04em] mb-8">
-          Purpose-built for understanding <span className="opacity-30">human motion.</span>
+          Engineered for real-time <span className="opacity-30">human gesture understanding.</span>
         </h2>
         <p className="text-[var(--color-text-secondary)] max-w-2xl mx-auto text-lg font-light leading-relaxed mb-16">
-          Unlike static image models, sign language requires temporal understanding across multiple frames. DeafConnect AI uses LSTM neural networks to recognize motion patterns, sequence flow, and gesture dynamics in real time.
+          DeafConnect AI uses a deep neural architecture trained on the WLASL dataset using two-hand landmark extraction, Gaussian noise regularization, dropout optimization, and real-time inference systems.
         </p>
         
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {labels.map((label, i) => (
+          {[
+            "Camera Input", "MediaPipe Detection", "Landmark Extraction", 
+            "Feature Vector Processing", "Neural Network Inference", "Stability Filtering", "Sentence Generation", "Speech / Text Output"
+          ].map((label, i) => (
             <span key={i} className="px-4 py-2 bg-brand-blue/10 border border-brand-blue/20 rounded-[2px] text-[10px] uppercase font-bold tracking-widest text-brand-blue">
               {label}
             </span>
@@ -178,10 +180,10 @@ export const AIModel = () => {
         
         <div className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-text-primary)] text-[var(--color-bg)] rounded-[2px] font-bold text-sm tracking-tighter">
           <div className="w-2 h-2 bg-brand-blue rounded-full" />
-          ~95% Training Accuracy
+          85–95% Accuracy
         </div>
         <p className="mt-8 text-[10px] text-[var(--color-text-secondary)] opacity-50 uppercase tracking-widest">
-          Performance may vary depending on lighting conditions and camera positioning.
+          Performance varies depending on lighting, gesture visibility, background conditions, and camera positioning.
         </p>
       </div>
     </section>
@@ -190,10 +192,10 @@ export const AIModel = () => {
 
 export const UseCases = () => {
   const cases = [
-    { title: "Educational Institutions", desc: "Enable inclusive classroom communication between students, teachers, and staff.", icon: <GraduationCap /> },
-    { title: "Healthcare Environments", desc: "Improve communication accessibility in hospitals, clinics, and emergency situations.", icon: <Hospital /> },
-    { title: "Customer Service", desc: "Support deaf individuals in retail stores, banks, restaurants, and public-facing businesses.", icon: <Laptop /> },
-    { title: "Workplace Accessibility", desc: "Create inclusive professional environments with AI-assisted communication support.", icon: <UserRound /> }
+    { title: "Educational Institutions", desc: "Support inclusive classrooms and improve communication accessibility for deaf students and teachers.", icon: <GraduationCap /> },
+    { title: "Healthcare & Emergency", desc: "Enable faster communication in hospitals, clinics, and emergency situations without requiring interpreters.", icon: <Hospital /> },
+    { title: "Retail & Public Services", desc: "Improve accessibility in restaurants, banks, customer support centers, and public-facing businesses.", icon: <Laptop /> },
+    { title: "Enterprise Accessibility", desc: "Empower organizations with inclusive communication systems powered by real-time AI.", icon: <UserRound /> }
   ];
 
   return (
@@ -202,7 +204,7 @@ export const UseCases = () => {
         <div className="text-center mb-20">
           <div className="text-[10px] uppercase font-bold tracking-[0.4em] text-brand-blue mb-4">Real-World Accessibility</div>
           <h2 className="text-4xl md:text-6xl font-display font-medium text-[var(--color-text-primary)] tracking-[-0.04em]">
-            Designed for everyday <span className="opacity-30">communication.</span>
+            Designed for practical <span className="opacity-30">communication environments.</span>
           </h2>
         </div>
         
@@ -230,11 +232,12 @@ export const UseCases = () => {
 
 export const Roadmap = () => {
   const items = [
-    { title: "Sentence-Level Recognition", description: "Advanced NLP for context-aware interpretation." },
-    { title: "Transformer-Based AI Models", description: "State-of-the-art neural architecture for higher precision." },
-    { title: "Multilingual Sign Support", description: "Bridging diverse global sign languages." },
-    { title: "Mobile AI Applications", description: "On-the-go accessibility on all devices." },
-    { title: "Real-Time Continuous Detection", description: "Seamless workflow for natural communication." }
+    { title: "Continuous Sentence Recognition", description: "Enable natural conversational sign interpretation beyond isolated gestures." },
+    { title: "Mobile AI Applications", description: "Deploy lightweight AI models on Android and iOS devices." },
+    { title: "Pakistani Sign Language Support", description: "Expand the platform beyond ASL to support regional sign systems." },
+    { title: "AI Video Call Integration", description: "Integrate sign language accessibility into Zoom, Meet, and Teams environments." },
+    { title: "Enterprise Accessibility APIs", description: "Provide scalable APIs for institutions, healthcare systems, and developers." },
+    { title: "AI Signing Avatars", description: "Generate animated signing avatars for enhanced deaf-to-deaf communication." }
   ];
 
   return (
@@ -247,7 +250,7 @@ export const Roadmap = () => {
               Building the <br/> future of <span className="text-brand-blue">accessibility.</span>
             </h2>
             <p className="text-[var(--color-text-secondary)] font-light">
-              Our technological roadmap is committed to expanding the horizons of real-time sign language interpretation and accessibility.
+              DeafConnect AI is evolving into a scalable accessibility ecosystem focused on real-time intelligence, multilingual communication, and human-centered AI experiences.
             </p>
           </div>
           

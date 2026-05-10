@@ -25,9 +25,10 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
         <div className="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text-secondary)]">
           <a href="#features" className="hover:text-brand-blue transition-colors">Features</a>
           <a href="#tech" className="hover:text-brand-blue transition-colors">Technology</a>
-          <a href="#workflow" className="hover:text-brand-blue transition-colors">How It Works</a>
+          <a href="#workflow" className="hover:text-brand-blue transition-colors">AI Pipeline</a>
           <a href="#use-cases" className="hover:text-brand-blue transition-colors">Use Cases</a>
           <a href="#roadmap" className="hover:text-brand-blue transition-colors">Roadmap</a>
+          <a href="#contact" className="hover:text-brand-blue transition-colors">Contact</a>
         </div>
 
         <div className="flex items-center gap-4">
