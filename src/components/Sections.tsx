@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Eye, Mic2, Network, ShieldCheck, Speaker } from "lucide-react";
+import { Eye, Mic2, Network, ShieldCheck, Speaker, Zap, Activity, Cpu, Layers, Scan } from "lucide-react";
 import React, { cloneElement as reactCloneElement } from "react";
 import MagicBento, { CardItem } from "./ui/MagicBento";
 
@@ -47,51 +47,65 @@ export const Features = () => {
       title: "Real-Time Sign Detection",
       description: "Detects live ASL gestures through webcam input using MediaPipe 3D hand landmark extraction and deep learning inference pipelines.",
       label: "Intelligence",
-      color: "rgba(0, 0, 0, 0.4)"
+      color: "rgba(0, 0, 0, 0.4)",
+      icon: <Scan size={18} />
     },
     {
       title: "Bidirectional Communication",
       description: "Supports both Sign-to-Voice and Voice-to-Text communication for seamless interaction between deaf and hearing users.",
       label: "Two-Way AI",
-      color: "rgba(0, 0, 0, 0.4)"
+      color: "rgba(0, 0, 0, 0.4)",
+      icon: <Layers size={18} />
     },
     {
       title: "Text-to-Speech Output",
       description: "Detected sign sequences are transformed into natural spoken audio using intelligent offline speech synthesis systems.",
       label: "Synthesis",
-      color: "rgba(0, 0, 0, 0.4)"
+      color: "rgba(0, 0, 0, 0.4)",
+      icon: <Speaker size={18} />
     },
     {
       title: "126-Feature AI Processing",
       description: "Processes 126-dimensional landmark vectors from two-hand tracking for improved sign discrimination and recognition accuracy.",
       label: "Neural",
-      color: "rgba(0, 0, 0, 0.4)"
+      color: "rgba(0, 0, 0, 0.4)",
+      icon: <Cpu size={18} />
     },
     {
       title: "Real-Time Voice Recognition",
       description: "Captures spoken audio through microphone input and converts speech into readable text for deaf users instantly.",
       label: "Speech AI",
-      color: "rgba(0, 0, 0, 0.4)"
+      color: "rgba(0, 0, 0, 0.4)",
+      icon: <Mic2 size={18} />
     },
     {
       title: "Scalable Accessibility Architecture",
       description: "Designed for future expansion including mobile AI deployment, multilingual sign support, and enterprise accessibility integrations.",
       label: "Growth",
-      color: "rgba(0, 0, 0, 0.0)"
+      color: "rgba(0, 0, 0, 0.0)",
+      icon: <Network size={18} />
     }
   ];
 
   return (
-    <section id="features" className="py-32 px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section id="features" className="py-32 px-8 overflow-hidden relative">
+      {/* Background Decorative Elements */}
+      <div className="absolute top-1/4 -left-20 w-[600px] h-[600px] bg-brand-blue/5 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute bottom-1/4 -right-20 w-[600px] h-[600px] bg-brand-blue/5 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none -z-10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--color-brand-blue)_1px,transparent_1px)] bg-[size:40px_40px]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-24">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[10px] uppercase font-bold tracking-[0.4em] text-brand-blue mb-4"
+            className="inline-flex items-center gap-2 px-3 py-1 bg-brand-blue/10 border border-brand-blue/30 rounded-[2px] mb-6"
           >
-            Core Capabilities
+            <Zap size={12} className="text-brand-blue" />
+            <span className="text-[10px] uppercase font-bold tracking-[0.4em] text-brand-blue">Core Capabilities</span>
           </motion.div>
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}

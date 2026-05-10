@@ -12,6 +12,7 @@ export interface CardItem {
   title: string;
   description: string;
   label: string;
+  icon?: ReactNode;
 }
 
 const createParticleElement = (x: number, y: number, color = DEFAULT_GLOW_COLOR) => {
@@ -529,6 +530,7 @@ const MagicBento = ({
               >
                 <div className="magic-bento-card__header">
                   <div className="magic-bento-card__label">{card.label}</div>
+                  {card.icon && <div className="magic-bento-card__icon">{card.icon}</div>}
                 </div>
                 <div className="magic-bento-card__content">
                   <h2 className="magic-bento-card__title">{card.title}</h2>
@@ -652,6 +654,7 @@ const MagicBento = ({
             >
               <div className="magic-bento-card__header">
                 <div className="magic-bento-card__label">{card.label}</div>
+                {card.icon && <div className="magic-bento-card__icon">{card.icon}</div>}
               </div>
               <div className="magic-bento-card__content">
                 <h2 className="magic-bento-card__title">{card.title}</h2>

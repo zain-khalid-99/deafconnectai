@@ -71,6 +71,17 @@
   opacity: 0.5;
 }
 
+.magic-bento-card__icon {
+  color: var(--white);
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
 .magic-bento-card__title {
   font-weight: 500;
   font-size: 24px;
