@@ -1,7 +1,7 @@
 import { Navbar, BackgroundEffects } from "./components/Layout";
 import { BackToTop } from "./components/BackToTop";
 import { Hero } from "./components/Hero";
-import { Stats, Features } from "./components/Sections";
+import { Stats, Features, Pricing } from "./components/Sections";
 import { HowItWorks, TechnologyStack, AIModel, UseCases, Roadmap, TechLogosLoop } from "./components/ExtraSections";
 import { Button } from "./components/ui/Button";
 import { useState, useEffect } from "react";
@@ -37,14 +37,15 @@ function HomePage() {
       <AIModel />
       <UseCases />
       <Roadmap />
+      <Pricing />
 
       <section className="py-48 px-8 relative overflow-hidden bg-brand-blue/[0.02]">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-5xl md:text-8xl font-display font-medium text-[var(--color-text-primary)] mb-10 leading-[0.9] tracking-[-0.05em]">
-            Communication should <br/> <span className="text-brand-blue text-glow">never be a barrier.</span>
+            Break Communication Barriers <br/> <span className="text-brand-blue text-glow">with AI-Powered Accessibility</span>
           </h2>
           <p className="text-xl text-[var(--color-text-secondary)] mb-12 font-light max-w-2xl mx-auto tracking-tight leading-relaxed">
-            DeafConnect AI combines artificial intelligence, computer vision, and accessibility-first engineering to create a future where communication becomes seamless, inclusive, and universally accessible for everyone.
+            Start using Deaf Connect AI today and create inclusive communication for everyone.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button variant="primary" className="w-full sm:w-auto min-w-[200px]">Launch Platform</Button>
@@ -104,6 +105,7 @@ export default function App() {
                 <h4 className="font-bold uppercase tracking-widest text-[var(--color-text-primary)] text-xs mb-8">Navigation</h4>
                 <ul className="space-y-4 text-sm text-[var(--color-text-secondary)] font-light">
                   <li><Link to="/#features" className="hover:text-brand-blue transition-colors">Features</Link></li>
+                  <li><Link to="/#pricing" className="hover:text-brand-blue transition-colors">Pricing</Link></li>
                   <li><Link to="/#tech" className="hover:text-brand-blue transition-colors">Technology</Link></li>
                   <li><Link to="/#roadmap" className="hover:text-brand-blue transition-colors">Roadmap</Link></li>
                   <li><Link to="/privacy" className="hover:text-brand-blue transition-colors">Privacy Policy</Link></li>
