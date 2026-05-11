@@ -140,7 +140,7 @@ export const Hero = () => {
 
   const y1 = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
     <section ref={containerRef} className="relative pt-32 lg:pt-48 pb-10 px-6 lg:px-8 overflow-hidden min-h-screen flex flex-col justify-center">

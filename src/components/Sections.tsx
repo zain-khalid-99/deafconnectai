@@ -16,7 +16,7 @@ export const Stats = () => {
   ];
 
   return (
-    <section className="py-24 px-8 relative">
+    <section id="stats" className="py-24 px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {stats.map((stat, i) => (
@@ -90,31 +90,19 @@ export const Features = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Staggered reveal for cards
-      gsap.from(cardsRef.current, {
-        y: 60,
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.15,
-        ease: "expo.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          once: true
-        }
-      });
-
       // Subtle floating animation for icons
       cardsRef.current.forEach((card, i) => {
         if (!card) return;
         const icon = card.querySelector(".feature-icon");
-        gsap.to(icon, {
-          y: -8,
-          duration: 2 + i * 0.2,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut"
-        });
+        if (icon) {
+          gsap.to(icon, {
+            y: -8,
+            duration: 2 + i * 0.2,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+          });
+        }
       });
     }, sectionRef);
 
@@ -143,9 +131,12 @@ export const Features = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, i) => (
-            <div
+            <motion.div
               key={i}
-              ref={(el) => (cardsRef.current[i] = el)}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: i * 0.1, ease: "easeOut" }}
               className="glass-card p-12 group hover:bg-brand-blue/[0.02] transition-all duration-700 relative overflow-hidden"
             >
               {/* Premium Glow Effect */}
@@ -239,24 +230,7 @@ export const Pricing = () => {
     }
   ];
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(cardsRef.current, {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-          once: true
-        }
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+  // Using motion for pricing cards instead of GSAP reveal
 
   return (
     <section id="pricing" ref={sectionRef} className="py-40 px-8 relative bg-brand-blue/[0.01]">
@@ -272,9 +246,12 @@ export const Pricing = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, i) => (
-            <div
+            <motion.div
               key={i}
-              ref={(el) => (cardsRef.current[i] = el)}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
               className={`glass-card p-12 rounded-[2px] flex flex-col relative transition-all duration-500 ${
                 plan.premium ? "border-brand-blue/50 bg-brand-blue/[0.04]" : "border-[var(--color-border)]"
               }`}

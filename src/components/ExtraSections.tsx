@@ -52,14 +52,14 @@ export const TechLogosLoop = () => {
 
 export const TechnologyStack = () => {
   const stack = [
-    { name: "MediaPipe", desc: "Real-time two-hand landmark detection optimized for CPU-based gesture tracking.", icon: <SiMediafire className="w-8 h-8" /> },
-    { name: "TensorFlow / Keras", desc: "Deep learning framework powering gesture classification and inference.", icon: <SiTensorflow className="w-8 h-8" /> },
-    { name: "OpenCV", desc: "Real-time webcam processing and computer vision pipeline management.", icon: <SiOpencv className="w-8 h-8" /> },
-    { name: "SpeechRecognition", desc: "Speech-to-text engine enabling hearing-to-deaf communication workflows.", icon: <Mic className="w-8 h-8" /> },
-    { name: "pyttsx3", desc: "Offline text-to-speech system for real-time voice generation.", icon: <FileText className="w-8 h-8" /> },
-    { name: "Streamlit", desc: "Interactive real-time application interface and accessibility dashboard.", icon: <SiStreamlit className="w-8 h-8" /> },
-    { name: "NumPy & Pandas", desc: "Feature engineering, preprocessing, and dataset management.", icon: <SiNumpy className="w-8 h-8" /> },
-    { name: "WLASL Dataset", desc: "Large-scale American Sign Language dataset used for AI model training.", icon: <Globe className="w-8 h-8" /> }
+    { name: "MediaPipe", desc: "Real-time two-hand landmark detection optimized for CPU-based gesture tracking.", icon: <div className="w-8 h-8"><SiMediafire size="100%" /></div> },
+    { name: "TensorFlow / Keras", desc: "Deep learning framework powering gesture classification and inference.", icon: <div className="w-8 h-8"><SiTensorflow size="100%" /></div> },
+    { name: "OpenCV", desc: "Real-time webcam processing and computer vision pipeline management.", icon: <div className="w-8 h-8"><SiOpencv size="100%" /></div> },
+    { name: "SpeechRecognition", desc: "Speech-to-text engine enabling hearing-to-deaf communication workflows.", icon: <div className="w-8 h-8"><Mic size="100%" /></div> },
+    { name: "pyttsx3", desc: "Offline text-to-speech system for real-time voice generation.", icon: <div className="w-8 h-8"><FileText size="100%" /></div> },
+    { name: "Streamlit", desc: "Interactive real-time application interface and accessibility dashboard.", icon: <div className="w-8 h-8"><SiStreamlit size="100%" /></div> },
+    { name: "NumPy & Pandas", desc: "Feature engineering, preprocessing, and dataset management.", icon: <div className="w-8 h-8"><SiNumpy size="100%" /></div> },
+    { name: "WLASL Dataset", desc: "Large-scale American Sign Language dataset used for AI model training.", icon: <div className="w-8 h-8"><Globe size="100%" /></div> }
   ];
 
   return (
@@ -157,7 +157,7 @@ export const AIModel = () => {
   ];
 
   return (
-    <section className="py-32 px-8 bg-brand-blue/[0.02]">
+    <section id="ai-model" className="py-32 px-8 bg-brand-blue/[0.02]">
       <div className="max-w-7xl mx-auto text-center">
         <div className="text-[10px] uppercase font-bold tracking-[0.4em] text-brand-blue mb-4">Deep Learning System</div>
         <h2 className="text-4xl md:text-6xl font-display font-medium text-[var(--color-text-primary)] tracking-[-0.04em] mb-8">
@@ -261,7 +261,7 @@ export const Roadmap = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1, ease: 'easeOut' }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-50px" }}
                 className="group relative p-1 rounded-[2px] overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-brand-blue to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-700" />
