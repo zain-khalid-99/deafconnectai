@@ -20,7 +20,7 @@ function HomePage() {
       <Stats />
       <TechLogosLoop />
       
-      <div className="py-20 opacity-80 overflow-hidden">
+      <div className="py-20 overflow-hidden">
         <CurvedLoop 
           marqueeText="DEAFCONNECT AI ✦ REAL-TIME SIGN LANGUAGE INTELLIGENCE ✦ ACCESSIBILITY FOR ALL ✦ "
           speed={0.5}

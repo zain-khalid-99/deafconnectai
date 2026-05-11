@@ -46,7 +46,14 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
   const ready = spacing > 0;
 
   useEffect(() => {
-    if (measureRef.current) setSpacing(measureRef.current.getComputedTextLength());
+    if (measureRef.current) {
+      try {
+        setSpacing(measureRef.current.getComputedTextLength());
+      } catch (e) {
+        console.warn("SVG text measurement failed", e);
+        setSpacing(1000); // Fallback spacing
+      }
+    }
   }, [text, className]);
 
   useEffect(() => {

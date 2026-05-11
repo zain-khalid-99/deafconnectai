@@ -89,24 +89,18 @@ export const Features = () => {
   ];
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Subtle floating animation for icons
-      cardsRef.current.forEach((card, i) => {
-        if (!card) return;
-        const icon = card.querySelector(".feature-icon");
-        if (icon) {
-          gsap.to(icon, {
-            y: -8,
-            duration: 2 + i * 0.2,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
-          });
-        }
+    // Subtle floating animation for icons using standard CSS or motion would be better
+    // but keeping GSAP for icons only if needed, wrapping in safety checks
+    const icons = document.querySelectorAll(".feature-icon");
+    icons.forEach((icon, i) => {
+      gsap.to(icon, {
+        y: -8,
+        duration: 2 + i * 0.2,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
       });
-    }, sectionRef);
-
-    return () => ctx.revert();
+    });
   }, []);
 
   return (
@@ -133,10 +127,10 @@ export const Features = () => {
           {features.map((feature, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, delay: i * 0.1, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
               className="glass-card p-12 group hover:bg-brand-blue/[0.02] transition-all duration-700 relative overflow-hidden"
             >
               {/* Premium Glow Effect */}
@@ -233,7 +227,7 @@ export const Pricing = () => {
   // Using motion for pricing cards instead of GSAP reveal
 
   return (
-    <section id="pricing" ref={sectionRef} className="py-40 px-8 relative bg-brand-blue/[0.01]">
+    <section id="pricing" className="py-40 px-8 relative bg-brand-blue/[0.02]">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-24">
           <h2 className="text-5xl md:text-8xl font-display font-medium text-[var(--color-text-primary)] mb-8 tracking-[-0.05em]">
@@ -248,10 +242,10 @@ export const Pricing = () => {
           {plans.map((plan, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`glass-card p-12 rounded-[2px] flex flex-col relative transition-all duration-500 ${
                 plan.premium ? "border-brand-blue/50 bg-brand-blue/[0.04]" : "border-[var(--color-border)]"
               }`}
